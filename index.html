@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Question 1
+
+
+    <title>Character Checker</title>
+    <h1>Character Checker</h1>
+    <input type="text" id="inputChar" maxlength="1" placeholder="Enter a character">
+    <button onclick="checkCharacter()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkCharacter() {
+            const inputChar = document.getElementById('inputChar').value;
+            const result = document.getElementById('result');
+
+            if (inputChar.length === 0) {
+                result.textContent = 'Please enter a character.';
+                return;
+            }
+
+            const charCode = inputChar.charCodeAt(0);
+
+            if (charCode >= 48 && charCode <= 57) {
+                result.textContent = 'The input is a number.';
+            } else if (charCode >= 65 && charCode <= 90) {
+                result.textContent = 'The input is an uppercase letter.';
+            } else if (charCode >= 97 && charCode <= 122) {
+                result.textContent = 'The input is a lowercase letter.';
+            } else {
+                result.textContent = 'The input is neither a number nor a letter.';
+            }
+        }
+    </script>
+
+
+    <!-- Question 2
+
+
+<title>Compare Two Integers</title>
+    <h2>Compare Two Integers</h2>
+    <form id="compareForm">
+        <label for="num1">First Integer:</label>
+        <input type="number" id="num1" name="num1" required><br><br>
+        <label for="num2">Second Integer:</label>
+        <input type="number" id="num2" name="num2" required><br><br>
+        <input type="button" value="Compare" onclick="compareNumbers()">
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function compareNumbers() {
+            var num1 = parseInt(document.getElementById('num1').value);
+            var num2 = parseInt(document.getElementById('num2').value);
+            var result;
+
+            if (num1 > num2) {
+                result = "The larger of " + num1 + " and " + num2 + " is " + num1 + ".";
+            } else if (num2 > num1) {
+                result = "The larger of " + num1 + " and " + num2 + " is " + num2 + ".";
+            } else {
+                result = "The values " + num1 + " and " + num2 + " are equal.";
+            }
+
+            document.getElementById('result').innerText = result;
+        }
+    </script> -->
+
+
+
+    <!-- Question 3
+
+
+<title>Number Sign Checker</title>
+    <h2>Number Sign Checker</h2>
+    <form id="numberForm">
+        <label for="userNumber">Enter a number:</label>
+        <input type="number" id="userNumber" name="userNumber" required><br><br>
+        <input type="button" value="Check" onclick="checkNumberSign()">
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function checkNumberSign() {
+            var number = parseInt(document.getElementById('userNumber').value);
+            var result;
+
+            if (number > 0) {
+                result = "The number is positive.";
+            } else if (number === 0) {
+                result = "The number is zero.";
+            } else {
+                result = "The number is negative.";
+            }
+
+            document.getElementById('result').innerText = result;
+        }
+    </script> -->
+
+
+
+    <!-- Question 4
+
+
+<title>Vowel Checker</title>
+    <h2>Vowel Checker</h2>
+    <form id="charForm">
+        <label for="userChar">Enter a character:</label>
+        <input type="text" id="userChar" name="userChar" maxlength="1" required><br><br>
+        <input type="button" value="Check" onclick="checkVowel()">
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function checkVowel() {
+            var char = document.getElementById('userChar').value.toLowerCase();
+            if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+                document.getElementById('result').innerText = "The character is a vowel.";
+            } else {
+                document.getElementById('result').innerText = "The character is not a vowel.";
+            }
+        }
+    </script> -->
+
+
+      <!-- Question 5
+
+    <title>Password Validation</title>
+    <h2>Password Validation</h2>
+    <form id="passwordForm">
+        <label for="userPassword">Enter your password:</label>
+        <input type="password" id="userPassword" name="userPassword" required><br><br>
+        <input type="button" value="Validate" onclick="validatePassword()">
+    </form>
+    <p id="validationResult"></p>
+
+    <script>
+        // Store the correct password (you can change this)
+        var correctPassword = "mySecret123";
+
+        function validatePassword() {
+            var enteredPassword = document.getElementById('userPassword').value;
+
+            if (enteredPassword === "") {
+                document.getElementById('validationResult').innerText = "Please enter your password.";
+            } else if (enteredPassword === correctPassword) {
+                document.getElementById('validationResult').innerText = "Correct! The password you entered matches the original password.";
+            } else {
+                document.getElementById('validationResult').innerText = "Incorrect password.";
+            }
+        }
+    </script> -->
+
+
+    <!-- Question 6
+
+    <script src="app.js"></script> -->
+
+
+    <!-- Question 7
+
+
+    <title>24-Hour Clock Converter</title>
+    <script>
+        function convertTo12HourFormat(time) {
+            const [hours, minutes] = time.split(':');
+            let formattedHour = parseInt(hours);
+
+            if (formattedHour >= 0 && formattedHour <= 11) {
+                return `${formattedHour}:${minutes} AM`;
+            } else if (formattedHour === 12) {
+                return `${formattedHour}:${minutes} PM`;
+            } else {
+                formattedHour -= 12;
+                return `${formattedHour}:${minutes} PM`;
+            }
+        }
+
+        const userInput = prompt("Enter time in 24-hour format (e.g., 1900):");
+        const convertedTime = convertTo12HourFormat(userInput);
+
+        alert(`Converted time: ${convertedTime}`);
+    </script> -->
+</body>
+</html>
